@@ -36,6 +36,7 @@ public class SecurityConfiguration {
         return auth;
     }
     
+    @Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
         .authenticationProvider(authenticationProvider())
