@@ -40,5 +40,4 @@ public class UserRegistrationController {
         // We then redirect to the registration page
         return "redirect:/registration?success";
     }
-    
 }

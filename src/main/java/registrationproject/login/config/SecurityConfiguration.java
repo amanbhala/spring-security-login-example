@@ -39,6 +39,7 @@ public class SecurityConfiguration {
     @Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		http
+        .userDetailsService(userService)
         .authenticationProvider(authenticationProvider())
         .authorizeHttpRequests(requests -> requests
             .requestMatchers("/registration**",
